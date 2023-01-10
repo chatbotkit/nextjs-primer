@@ -131,9 +131,9 @@ export default function Index() {
         {/* messages */}
         <div>
           {
-            messages.map(({ it, type, text }) => {
+            messages.map(({ id, type, text }) => {
               return (
-                <div>
+                <div key={id}>
                   <div>{{ user: '🧠', bot: '🤖' }[type]}</div>
                   <div>{text}</div>
                 </div>
